@@ -10,7 +10,7 @@ export const GAME_VERSION = '0.1.0';
 export const GAME_WIDTH = 960;          // px — ratio 16:9
 export const GAME_HEIGHT = 540;         // px
 export const BG_COLOR = '#1a1208';      // Fond Nuit (STYLE_GUIDE §2.1)
-export const DEBUG_MODE = true;         // → false à l'étape 15 (release)
+export const DEBUG_MODE = false;        // mode release (étape 15) — true pour déboguer la physique
 
 // ── Monde (tilemap UNIQUE 80x80 — chunk loading INTERDIT) ───────
 export const TILE_SIZE = 32;            // px

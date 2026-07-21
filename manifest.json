@@ -1,0 +1,15 @@
+{
+  "name": "Sands of Aetheria",
+  "short_name": "Aetheria",
+  "description": "RPG sandbox 2D top-down brutal et systémique — Skyrim × Kenshi dans le navigateur.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#1a1208",
+  "theme_color": "#1a1208",
+  "lang": "fr",
+  "icons": [
+    { "src": "assets/ui/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/ui/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

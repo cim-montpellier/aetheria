@@ -1,13 +1,13 @@
 # MEMORY_STATE.md — Cerveau Persistant
 
-## Projet : Sands of Aetheria | Étape 14/15 | Santé : 🟡
+## Projet : Sands of Aetheria | Étape 15/15 | ✅ MVP TERMINÉ | Santé : 🟡
 
 ### 🏗️ ÉTAT DU WORKSPACE
 | Fichier | Rôle | Dernière Modif | Statut |
 |---|---|---|---|
-| index.html | Entrée HTML + CDN | Étape 1 | ✅ Stable |
+| index.html | Entrée HTML + CDN + SEO/OG/PWA | Étape 15 | ✅ Stable (modif ét.15) |
 | src/main.js | Config Phaser + 5 scènes | Étape 2 | ✅ Stable |
-| src/config.js | Constantes globales | Étape 9 | ✅ Stable (modif ét.9) |
+| src/config.js | Constantes globales (DEBUG_MODE=false) | Étape 15 | ✅ Stable (modif ét.15) |
 | src/utils/EventBus.js | Bus événements (lazy) | Étape 1 | ✅ Stable |
 | src/utils/ObjectPool.js | Pool générique anti-GC | Étape 2 | ✅ Stable |
 | src/utils/PlaceholderFactory.js | Textures placeholder + particules | Étape 13 | ✅ Stable (modif ét.13) |
@@ -47,6 +47,9 @@
 | tools/gen_tilemap.js | Générateur world.json + tileset PNG | Étape 3 | ✅ Stable |
 | assets/tilemaps/world.json | Tilemap Tiled 80x80 (3 layers) | Étape 3 | ✅ Généré |
 | assets/tilemaps/world_tileset.png | Tileset 9 tuiles 32px (PNG) | Étape 3 | ✅ Généré |
+| assets/ui/icon-512.png | Icône PWA (512×512) | Étape 15 | ✅ Généré |
+| manifest.json | PWA manifest (standalone) | Étape 15 | ✅ Stable |
+| README.md | Doc jeu + contrôles + crédits | Étape 15 | ✅ Stable (réécrit) |
 | tests/_mocks.js | Mocks Phaser (harness scènes+entités) | Étape 5 | ✅ Stable |
 | tests/smoke_boot.js | Smoke test boot headless | Étape 1 | ✅ Stable |
 | tests/test_step_1.js | Tests TDD étape 1 | Étape 1 | ✅ Stable |
@@ -95,17 +98,17 @@
 - Arbitrage ranges IA : valeurs TECH_SPEC §5.2 (150/45/220/0.20) retenues (= tests XML), GDD §4.4 approx → harmonisé
 
 ### 📊 PROGRESSION
-- Étapes terminées : 1 à 14
-- Étape en cours : 15 (à venir)
-- Complétion : 93% (14/15)
+- Étapes terminées : 1 à 15 — ✅ MVP 100% TERMINÉ
+- Complétion : 100% (15/15) 🎉
 - 🧪 SUITE TDD : 18 fichiers · 174 assertions · TOUT VERT
+- 📦 Build release : DEBUG_MODE=false, PWA (manifest+icône), SEO/OG, README complet
 
 ### 🚦 PROCHAINE ÉTAPE
-Étape 15 [M] — BUILD FINAL, DOCUMENTATION & DÉPLOIEMENT : README.md complet (description,
-contrôles, comment jouer, crédits assets CC0), index.html DIFF (meta SEO/OpenGraph/
-favicon/PWA), manifest.json (PWA), config.js DIFF (DEBUG_MODE=false). Vérifications :
-zéro erreur console en release, fonctionnement depuis file:// et GitHub Pages/Netlify,
-crédits assets. ZIP final exportable.
+🎉 PROJET MVP TERMINÉ. Idées POST-MVP (TOKEN_BUDGET §8, hors-scope MVP) :
+construction de base (Kenshi), recrutement/compagnons, maladies/poisons, économie
+dynamique (offre/demande), >4 types d'ennemis, météo (tempêtes de sable), montures,
+magie/sorts, mini-jeux, quêtes scriptées. + Intégrer les vrais assets CC0 (Kenney/
+OpenGameArt) dans assets/sprites/, et valider les perfs navigateur (60 FPS, FMP <3s).
 
 ### 📝 NOTES CRITIQUES POUR REPRISE (8 max — détail dans MEMORY_ARCHIVE.md)
 - Splits d'architecture (rester sous les limites) : Player/InputHandler (TOKEN §2.2), Enemy/EnemyStates (TOKEN §5.2).
@@ -124,3 +127,7 @@ crédits assets. ZIP final exportable.
   aucun bug, save <50KB). Assets CC0 réels = drop manuel (placeholders Phaser fonctionnels, ASSETS_PLAN §1).
 - NOTE compression : tableau workspace (48 fichiers) = plancher incompressible ; MEMORY ~120L est le minimum
   atteignable à ce stade (la cible <100 du protocole suppose moins de fichiers).
+- ✅ ÉTAPE 15 (FIN) : README.md complet (pitch, features, contrôles, lancer, architecture, crédits CC0, note
+  agent préservée). manifest.json PWA (standalone, icône 512 générée). index.html : meta description/theme-color,
+  OpenGraph, lien manifest + favicon, apple-mobile-web-app. config.js : DEBUG_MODE=false (release). Jeu déployable
+  sur GitHub Pages/Netlify (servir le dossier ; ES modules via CDN, aucun build). MVP livrable et jouable.
